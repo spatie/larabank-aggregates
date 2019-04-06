@@ -41,13 +41,6 @@ final class AccountAggregateRoot extends AggregateRoot
         return $this;
     }
 
-    public function deleteAccount()
-    {
-        $this->recordThat(new AccountDeleted());
-
-        return $this;
-    }
-
     public function addMoney(int $amount)
     {
         $this->recordThat(new MoneyAdded($amount));
@@ -86,6 +79,13 @@ final class AccountAggregateRoot extends AggregateRoot
         $this->balance -= $event->amount;
 
         $this->accountLimitHitInARow = 0;
+    }
+
+    public function deleteAccount()
+    {
+        $this->recordThat(new AccountDeleted());
+
+        return $this;
     }
 
     public function applyAccountLimitHit()

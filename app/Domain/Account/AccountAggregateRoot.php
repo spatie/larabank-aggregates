@@ -58,7 +58,7 @@ final class AccountAggregateRoot extends AggregateRoot
 
     protected function applyMoneyAdded(MoneyAdded $event)
     {
-        // \Log::info('apply money subtracted' . $event->amount);
+        // \Log::info('apply money added' . $event->amount);
 
         $this->accountLimitHitInARow = 0;
 

@@ -1745,12 +1745,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-event-projector.git",
-                "reference": "70b22093dfe167df67d91ae3987d3aee38704b84"
+                "reference": "648436d3cff60f3cb64f8c56ba81e1b2e95c5400"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-event-projector/zipball/70b22093dfe167df67d91ae3987d3aee38704b84",
-                "reference": "70b22093dfe167df67d91ae3987d3aee38704b84",
+                "url": "https://api.github.com/repos/spatie/laravel-event-projector/zipball/648436d3cff60f3cb64f8c56ba81e1b2e95c5400",
+                "reference": "648436d3cff60f3cb64f8c56ba81e1b2e95c5400",
                 "shasum": ""
             },
             "require": {
@@ -1805,7 +1805,7 @@
                 "sourcing",
                 "spatie"
             ],
-            "time": "2019-04-06T18:39:20+00:00"
+            "time": "2019-04-06T19:43:47+00:00"
         },
         {
             "name": "spatie/laravel-schemaless-attributes",

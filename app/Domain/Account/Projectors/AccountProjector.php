@@ -35,6 +35,7 @@ final class AccountProjector implements Projector
         $account = Account::uuid($uuid);
 
         $account->balance += $event->amount;
+
         $account->save();
     }
 
@@ -43,6 +44,7 @@ final class AccountProjector implements Projector
         $account = Account::uuid($uuid);
 
         $account->balance -= $event->amount;
+
         $account->save();
     }
 

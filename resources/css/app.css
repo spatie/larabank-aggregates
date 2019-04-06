@@ -1,0 +1,14 @@
+@charset 'UTF-8';
+
+@import './bootstrap.css';
+@import './components/*';
+
+@tailwind utilities;
+
+.bg-green-gradient {
+    background: -webkit-linear-gradient(#51d88a, #1f9d55);
+}
+
+.bg-red-gradient {
+    background: -webkit-linear-gradient(#ef5753, #cc1f1a);
+}

@@ -1,0 +1,66 @@
+.make-it-rain {
+    width: 130px;
+    height: 150px;
+    position: relative;
+}
+
+.make-it-rain-a,
+.make-it-rain-b,
+.make-it-rain-c,
+.make-it-rain-d {
+    position: absolute;
+    line-height: 1;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+.make-it-rain-a {
+    top: 0;
+    left: 30px;
+    font-size: 50px;
+    animation-name: float-behind;
+    animation-duration: 2s;
+}
+
+.make-it-rain-b {
+    right: 0;
+    bottom: 40px;
+    font-size: 40px;
+    animation-name: float-behind;
+    animation-duration: 1.5s;
+}
+
+.make-it-rain-c {
+    right: 60px;
+    bottom: 0;
+    font-size: 25px;
+    animation-name: float-behind;
+    animation-duration: 1.5s;
+    animation-delay: 1s;
+}
+
+.make-it-rain-d {
+    left: 10px;
+    top: 45px;
+    font-size: 80px;
+    animation-name: float-front;
+    animation-duration: 1.4s;
+}
+
+@keyframes float-front {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(10px);
+    }
+}
+
+@keyframes float-behind {
+    from {
+        transform: translateX(0) translateY(0) scale(1);
+    }
+    to {
+        transform: translateX(5px) translateY(10px) scale(0.95);
+    }
+}

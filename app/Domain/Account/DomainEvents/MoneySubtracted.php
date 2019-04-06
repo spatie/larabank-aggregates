@@ -14,4 +14,3 @@ final class MoneySubtracted implements DomainEvent
         $this->amount = $amount;
     }
 }
-

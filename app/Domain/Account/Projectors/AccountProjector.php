@@ -7,8 +7,6 @@ use App\Domain\Account\DomainEvents\AccountCreated;
 use App\Domain\Account\DomainEvents\AccountDeleted;
 use App\Domain\Account\DomainEvents\MoneyAdded;
 use App\Domain\Account\DomainEvents\MoneySubtracted;
-use EventSauce\EventSourcing\Consumer;
-use EventSauce\EventSourcing\Message;
 use Spatie\EventProjector\Projectors\Projector;
 use Spatie\EventProjector\Projectors\ProjectsEvents;
 

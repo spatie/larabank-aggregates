@@ -7,4 +7,3 @@ use Spatie\EventProjector\DomainEvent;
 final class MoreMoneyNeeded implements DomainEvent
 {
 }
-

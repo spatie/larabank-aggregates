@@ -13,7 +13,6 @@ use App\Domain\Account\Projectors\AccountProjector;
 use App\Domain\Account\Projectors\OfferLoanReactor;
 use App\Domain\Account\Projectors\TransactionCountProjector;
 use Spatie\EventProjector\AggregateRoot;
-use Spatie\LaravelEventSauce\Concerns\IgnoresMissingMethods;
 
 final class AccountAggregateRoot extends AggregateRoot
 {

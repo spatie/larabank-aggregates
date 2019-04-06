@@ -4,11 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Account;
 use App\Domain\Account\AccountAggregateRoot;
-use App\Domain\Account\AccountIdentifier;
-use App\Domain\Account\AddMoney;
-use App\Domain\Account\CreateAccount;
-use App\Domain\Account\DeleteAccount;
-use App\Domain\Account\SubtractMoney;
 use App\Http\Requests\UpdateAccountRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;

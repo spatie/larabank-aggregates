@@ -19,4 +19,3 @@ final class AccountCreated implements DomainEvent
         $this->userId = $userId;
     }
 }
-

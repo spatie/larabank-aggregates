@@ -5,8 +5,6 @@ namespace App\Domain\Account\Projectors;
 use App\Account;
 use App\Domain\Account\DomainEvents\MoreMoneyNeeded;
 use App\Mail\LoanProposalMail;
-use EventSauce\EventSourcing\Consumer;
-use EventSauce\EventSourcing\Message;
 use Illuminate\Support\Facades\Mail;
 use Spatie\EventProjector\EventHandlers\EventHandler;
 use Spatie\EventProjector\EventHandlers\HandlesEvents;

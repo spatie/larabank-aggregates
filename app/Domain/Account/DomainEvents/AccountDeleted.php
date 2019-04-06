@@ -6,6 +6,4 @@ use Spatie\EventProjector\DomainEvent;
 
 final class AccountDeleted implements DomainEvent
 {
-
 }
-

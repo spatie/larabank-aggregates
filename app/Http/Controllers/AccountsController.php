@@ -22,8 +22,7 @@ class AccountsController extends Controller
     {
         $newUuid = Str::uuid();
 
-        $this
-            ->getAccountAggregateRoot($newUuid)
+        AccountAggregateRoot::retrieve($newUuid)
             ->createAccount($request->name, auth()->user()->id)
             ->persist();
 
@@ -32,7 +31,7 @@ class AccountsController extends Controller
 
     public function update(Account $account, UpdateAccountRequest $request)
     {
-        $aggregateRoot = $this->getAccountAggregateRoot($account->uuid);
+        $aggregateRoot = AccountAggregateRoot::retrieve($account->uuid);
 
         $request->adding()
             ? $aggregateRoot->addMoney($request->amount)
@@ -45,16 +44,10 @@ class AccountsController extends Controller
 
     public function destroy(Account $account)
     {
-        $this
-            ->getAccountAggregateRoot($account->uuid)
+        AccountAggregateRoot::retrieve($account->uuid)
             ->deleteAccount()
             ->persist();
 
         return back();
-    }
-
-    protected function getAccountAggregateRoot(string $uuid): AccountAggregateRoot
-    {
-        return AccountAggregateRoot::retrieve($uuid);
     }
 }

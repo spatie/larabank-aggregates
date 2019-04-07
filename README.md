@@ -4,6 +4,10 @@
 
 This is an example app used in the documentation of [laravel-event-projector](https://docs.spatie.be/laravel-event-projector).
 
+These rules are implemented:
+- a user cannot go below -5000 on an account
+- when hitting the limit three times in a row a loan proposal mail must be sent
+
 ## Getting started
 
 - Clone the repo

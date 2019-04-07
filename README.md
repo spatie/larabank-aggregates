@@ -1,4 +1,4 @@
-# Larabank built with projectors 📽
+# Larabank built with an aggregate and projectors 📽
 
 ![Larabank accounts page](https://spatie.github.io/larabank-traditional/screenshot.png)
 

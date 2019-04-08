@@ -2,10 +2,10 @@
 
 namespace App\Domain\Account\Projectors;
 
-use App\Domain\Account\DomainEvents\AccountCreated;
-use App\Domain\Account\DomainEvents\AccountDeleted;
-use App\Domain\Account\DomainEvents\MoneyAdded;
-use App\Domain\Account\DomainEvents\MoneySubtracted;
+use App\Domain\Account\Events\AccountCreated;
+use App\Domain\Account\Events\AccountDeleted;
+use App\Domain\Account\Events\MoneyAdded;
+use App\Domain\Account\Events\MoneySubtracted;
 use App\TransactionCount;
 use Spatie\EventProjector\Projectors\Projector;
 use Spatie\EventProjector\Projectors\ProjectsEvents;
@@ -21,26 +21,26 @@ final class TransactionCountProjector implements Projector
         AccountDeleted::class => 'onAccountDeleted',
     ];
 
-    public function onAccountCreated(AccountCreated $event, string $uuid)
+    public function onAccountCreated(AccountCreated $event, string $aggregateUuid)
     {
         TransactionCount::create([
-            'uuid' => $uuid,
+            'uuid' => $aggregateUuid,
             'user_id' => $event->userId,
         ]);
     }
 
-    public function onMoneyAdded(string $uuid)
+    public function onMoneyAdded(string $aggregateUuid)
     {
-        TransactionCount::uuid($uuid)->incrementCount();
+        TransactionCount::uuid($aggregateUuid)->incrementCount();
     }
 
-    public function onMoneySubtracted(string $uuid)
+    public function onMoneySubtracted(string $aggregateUuid)
     {
-        TransactionCount::uuid($uuid)->incrementCount();
+        TransactionCount::uuid($aggregateUuid)->incrementCount();
     }
 
-    public function onAccountDeleted(string $uuid)
+    public function onAccountDeleted(string $aggregateUuid)
     {
-        TransactionCount::uuid($uuid)->delete();
+        TransactionCount::uuid($aggregateUuid)->delete();
     }
 }

@@ -2,29 +2,17 @@
 
 namespace App\Domain\Account;
 
-use App\Domain\Account\DomainEvents\AccountCreated;
-use App\Domain\Account\DomainEvents\AccountDeleted;
-use App\Domain\Account\DomainEvents\AccountLimitHit;
-use App\Domain\Account\DomainEvents\MoneyAdded;
-use App\Domain\Account\DomainEvents\MoneySubtracted;
-use App\Domain\Account\DomainEvents\MoreMoneyNeeded;
+use App\Domain\Account\Events\AccountCreated;
+use App\Domain\Account\Events\AccountDeleted;
+use App\Domain\Account\Events\AccountLimitHit;
+use App\Domain\Account\Events\MoneyAdded;
+use App\Domain\Account\Events\MoneySubtracted;
+use App\Domain\Account\Events\MoreMoneyNeeded;
 use App\Domain\Account\Exceptions\CouldNotSubtractMoney;
-use App\Domain\Account\Projectors\AccountProjector;
-use App\Domain\Account\Projectors\OfferLoanReactor;
-use App\Domain\Account\Projectors\TransactionCountProjector;
 use Spatie\EventProjector\AggregateRoot;
 
 final class AccountAggregateRoot extends AggregateRoot
 {
-    protected $projectors = [
-        AccountProjector::class,
-        TransactionCountProjector::class,
-    ];
-
-    protected $reactors = [
-        OfferLoanReactor::class,
-    ];
-
     /** @var int */
     private $balance = 0;
 

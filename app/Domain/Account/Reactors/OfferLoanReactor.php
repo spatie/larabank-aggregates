@@ -3,7 +3,7 @@
 namespace App\Domain\Account\Projectors;
 
 use App\Account;
-use App\Domain\Account\DomainEvents\MoreMoneyNeeded;
+use App\Domain\Account\Events\MoreMoneyNeeded;
 use App\Mail\LoanProposalMail;
 use Illuminate\Support\Facades\Mail;
 use Spatie\EventProjector\EventHandlers\EventHandler;
@@ -15,9 +15,9 @@ final class OfferLoanReactor implements EventHandler
 
     protected $handleEvent = MoreMoneyNeeded::class;
 
-    public function __invoke(MoreMoneyNeeded $event, string $uuid)
+    public function __invoke(MoreMoneyNeeded $event, string $aggregateUuid)
     {
-        $account = Account::where('uuid', $uuid)->first();
+        $account = Account::where('uuid', $aggregateUuid)->first();
 
         Mail::to($account->user)->send(new LoanProposalMail());
     }

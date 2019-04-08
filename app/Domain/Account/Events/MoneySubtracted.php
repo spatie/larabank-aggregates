@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Domain\Account\DomainEvents;
+namespace App\Domain\Account\Events;
 
-use Spatie\EventProjector\DomainEvent;
+use Spatie\EventProjector\ShouldBeStored;
 
-final class MoneySubtracted implements DomainEvent
+final class MoneySubtracted implements ShouldBeStored
 {
     /** @var int */
     public $amount;

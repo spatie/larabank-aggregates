@@ -33,7 +33,7 @@ final class AccountAggregateRoot extends AggregateRoot
     {
         if($this->ammountAddedIsNegative($amount)) {
             
-            $this->subtractMoney($amount)
+            $this->subtractMoney($amount);
                 
         } else {
             

@@ -31,8 +31,16 @@ final class AccountAggregateRoot extends AggregateRoot
 
     public function addMoney(int $amount)
     {
-        $this->recordThat(new MoneyAdded($amount));
-
+        if($this->ammountAddedIsNegative($amount)) {
+            
+            $this->subtractMoney($amount)
+                
+        } else {
+            
+            $this->recordThat(new MoneyAdded($amount));        
+            
+        }
+        
         return $this;
     }
 
@@ -90,4 +98,10 @@ final class AccountAggregateRoot extends AggregateRoot
     {
         return $this->accountLimitHitInARow >= 3;
     }
+    
+    private function ammountAddedIsNegative(int $amount): bool
+    {
+        return $amount < 0;
+    }
+    
 }

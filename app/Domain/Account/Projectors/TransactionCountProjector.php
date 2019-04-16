@@ -22,12 +22,12 @@ final class TransactionCountProjector implements Projector
         ]);
     }
 
-    public function onMoneyAdded(string $aggregateUuid)
+    public function onMoneyAdded(MoneyAdded $event, string $aggregateUuid)
     {
         TransactionCount::uuid($aggregateUuid)->incrementCount();
     }
 
-    public function onMoneySubtracted(string $aggregateUuid)
+    public function onMoneySubtracted(MoneySubtracted $event, string $aggregateUuid)
     {
         TransactionCount::uuid($aggregateUuid)->incrementCount();
     }

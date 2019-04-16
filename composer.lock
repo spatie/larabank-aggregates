@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d9f5fa3bd8aea07cdf0c2c75138b20a3",
+    "content-hash": "1d16619d681d7a226bee9b8d0c067a9d",
     "packages": [
         {
             "name": "cakephp/chronos",
@@ -1741,16 +1741,16 @@
         },
         {
             "name": "spatie/laravel-event-projector",
-            "version": "2.2.0",
+            "version": "2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-event-projector.git",
-                "reference": "bf244d3f5e05342a4fcd9d652ac29b6316c68cff"
+                "reference": "cdc7982e5db56cbd8a5b9440d3a1a6b9a6f1d15e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-event-projector/zipball/bf244d3f5e05342a4fcd9d652ac29b6316c68cff",
-                "reference": "bf244d3f5e05342a4fcd9d652ac29b6316c68cff",
+                "url": "https://api.github.com/repos/spatie/laravel-event-projector/zipball/cdc7982e5db56cbd8a5b9440d3a1a6b9a6f1d15e",
+                "reference": "cdc7982e5db56cbd8a5b9440d3a1a6b9a6f1d15e",
                 "shasum": ""
             },
             "require": {
@@ -1810,7 +1810,7 @@
                 "sourcing",
                 "spatie"
             ],
-            "time": "2019-04-16T14:05:40+00:00"
+            "time": "2019-04-16T16:01:43+00:00"
         },
         {
             "name": "spatie/laravel-schemaless-attributes",

@@ -15,7 +15,7 @@
         "laravel/horizon": "^3.0",
         "laravel/telescope": "^2.0",
         "laravel/tinker": "^1.0",
-        "spatie/laravel-event-projector": "^2.2",
+        "spatie/laravel-event-projector": "^2.3",
         "spatie/laravel-tail": "^3.2"
     },
     "require-dev": {

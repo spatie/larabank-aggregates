@@ -1,28 +1,31 @@
 <?php
 
-use App\Domain\Account\Projectors\AccountProjector;
-use App\Domain\Account\Projectors\OfferLoanReactor;
-use App\Domain\Account\Projectors\TransactionCountProjector;
-
 return [
 
     /*
-     * Projectors are classes that build up projections. You can create them by
-     * performing `php artisan event-projector:create-projector`. Projectors
-     * can be registered in this array or a service provider.
+     * These directories will be scanned for projectors and reactors. They
+     * will be automatically registered to projectionist automatically.
      */
-    'projectors' => [
-        AccountProjector::class,
-        TransactionCountProjector::class,
+    'auto_discover_projectors_and_reactors' => [
+        app_path(),
     ],
 
     /*
-     * Reactors are classes that handle side effects. You can create them by
-     * performing `php artisan event-projector:create-reactor`. Reactors
-     * can be registered in this array or a service provider.
+     * Projectors are classes that build up projections. You can create them by performing
+     * `php artisan event-projector:create-projector`.  When not using autodiscovery
+     * Projectors can be registered in this array or a service provider.
+     */
+    'projectors' => [
+        // App\Projectors\YourProjector::class
+    ],
+
+    /*
+     * Reactors are classes that handle side effects. You can create them by performing
+     * `php artisan event-projector:create-reactor`. When not using autodiscovery
+     * Reactors can be registered in this array or a service provider.
      */
     'reactors' => [
-        OfferLoanReactor::class,
+        // App\Reactors\YourReactor::class
     ],
 
     /*
@@ -65,4 +68,13 @@ return [
      * a chunked way. You can specify the chunk size here.
      */
     'replay_chunk_size' => 1000,
+
+    /*
+     * In production, you likely don't want the package to auto discover the event handlers
+     * on every request. The package can cache all registered event handlers.
+     * More info: https://docs.spatie.be/laravel-event-projector/v2/advanced-usage/discovering-projectors-and-reactors
+     *
+     * Here you can specify where the cache should be stored.
+     */
+    'cache_path' => storage_path('app/event-projector'),
 ];

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Domain\Account\Projectors;
+namespace App\Domain\Account\Reactors;
 
 use App\Account;
 use App\Domain\Account\Events\MoreMoneyNeeded;
@@ -12,8 +12,6 @@ use Spatie\EventProjector\EventHandlers\HandlesEvents;
 final class OfferLoanReactor implements EventHandler
 {
     use HandlesEvents;
-
-    protected $handleEvent = MoreMoneyNeeded::class;
 
     public function __invoke(MoreMoneyNeeded $event, string $aggregateUuid)
     {

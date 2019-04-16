@@ -7,19 +7,12 @@ use App\Domain\Account\Events\AccountCreated;
 use App\Domain\Account\Events\AccountDeleted;
 use App\Domain\Account\Events\MoneyAdded;
 use App\Domain\Account\Events\MoneySubtracted;
-use Spatie\EventProjector\Projectors\Projector;
+use Spatie\EventProjector\EventHandlers\EventHandler;
 use Spatie\EventProjector\Projectors\ProjectsEvents;
 
-final class AccountProjector implements Projector
+final class AccountProjector implements EventHandler
 {
     use ProjectsEvents;
-
-    protected $handlesEvents = [
-        AccountCreated::class => 'onAccountCreated',
-        MoneyAdded::class => 'onMoneyAdded',
-        MoneySubtracted::class => 'onMoneySubtracted',
-        AccountDeleted::class => 'onAccountDeleted',
-    ];
 
     public function onAccountCreated(AccountCreated $event, string $aggregateUuid)
     {

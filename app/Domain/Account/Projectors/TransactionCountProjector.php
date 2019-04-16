@@ -14,13 +14,6 @@ final class TransactionCountProjector implements Projector
 {
     use ProjectsEvents;
 
-    protected $handlesEvents = [
-        AccountCreated::class => 'onAccountCreated',
-        MoneyAdded::class => 'onMoneyAdded',
-        MoneySubtracted::class => 'onMoneySubtracted',
-        AccountDeleted::class => 'onAccountDeleted',
-    ];
-
     public function onAccountCreated(AccountCreated $event, string $aggregateUuid)
     {
         TransactionCount::create([

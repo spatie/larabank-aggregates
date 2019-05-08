@@ -1,1 +1,1 @@
-It seems like you are have finanical troubles. Contact us for a loan.
+It seems like you are having financial troubles. Contact us for a loan.

@@ -2,7 +2,7 @@
 
 namespace App\Domain\Account\Events;
 
-use Spatie\EventProjector\ShouldBeStored;
+use Spatie\EventSourcing\ShouldBeStored;
 
 final class MoneySubtracted implements ShouldBeStored
 {

@@ -44,23 +44,23 @@ return [
     /*
      * This class is responsible for storing events. To add extra behaviour you
      * can change this to a class of your own. The only restriction is that
-     * it should extend \Spatie\EventProjector\Models\StoredEvent.
+     * it should extend \Spatie\EventSourcing\Models\StoredEvent.
      */
-    'stored_event_model' => \Spatie\EventProjector\Models\StoredEvent::class,
+    'stored_event_repository' => \Spatie\EventSourcing\EloquentStoredEventRepository::class,
 
     /*
      * This class is responsible for handle stored events. To add extra behaviour you
      * can change this to a class of your own. The only restriction is that
-     * it should extend \Spatie\EventProjector\HandleDomainEventJob.
+     * it should extend \Spatie\EventSourcing\HandleDomainEventJob.
      */
-    'stored_event_job' => \Spatie\EventProjector\HandleStoredEventJob::class,
+    'stored_event_job' => \Spatie\EventSourcing\HandleStoredEventJob::class,
 
     /*
      * This class is responsible for serializing events. By default an event will be serialized
      * and stored as json. You can customize the class name. A valid serializer
-     * should implement Spatie\EventProjector\EventSerializers\Serializer.
+     * should implement Spatie\EventSourcing\EventSerializers\Serializer.
      */
-    'event_serializer' => \Spatie\EventProjector\EventSerializers\JsonEventSerializer::class,
+    'event_serializer' => \Spatie\EventSourcing\EventSerializers\JsonEventSerializer::class,
 
     /*
      * When replaying events potentially a lot of events will have to be retrieved.

@@ -6,8 +6,8 @@ use App\Account;
 use App\Domain\Account\Events\MoreMoneyNeeded;
 use App\Mail\LoanProposalMail;
 use Illuminate\Support\Facades\Mail;
-use Spatie\EventProjector\EventHandlers\EventHandler;
-use Spatie\EventProjector\EventHandlers\HandlesEvents;
+use Spatie\EventSourcing\EventHandlers\EventHandler;
+use Spatie\EventSourcing\EventHandlers\HandlesEvents;
 
 final class OfferLoanReactor implements EventHandler
 {

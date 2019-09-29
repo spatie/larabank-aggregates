@@ -20,7 +20,7 @@ class AccountsController extends Controller
 
     public function store(Request $request)
     {
-        $newUuid = Str::uuid();
+        $newUuid = Str::uuid()->toString();
 
         AccountAggregateRoot::retrieve($newUuid)
             ->createAccount($request->name, auth()->user()->id)

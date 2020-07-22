@@ -15,7 +15,8 @@
         "laravel/horizon": "^3.0",
         "laravel/telescope": "^2.0",
         "laravel/tinker": "^1.0",
-        "spatie/laravel-event-sourcing": "^1.0"
+        "spatie/laravel-event-sourcing": "^1.0",
+        "laravel/ui": "^2.0"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",

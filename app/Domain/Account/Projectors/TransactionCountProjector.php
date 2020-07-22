@@ -3,7 +3,6 @@
 namespace App\Domain\Account\Projectors;
 
 use App\Domain\Account\Events\AccountCreated;
-use App\Domain\Account\Events\AccountDeleted;
 use App\Domain\Account\Events\MoneyAdded;
 use App\Domain\Account\Events\MoneySubtracted;
 use App\TransactionCount;

@@ -6,13 +6,10 @@ use App\Domain\Account\Events\AccountCreated;
 use App\Domain\Account\Events\MoneyAdded;
 use App\Domain\Account\Events\MoneySubtracted;
 use App\TransactionCount;
-use Spatie\EventSourcing\Projectors\Projector;
-use Spatie\EventSourcing\Projectors\ProjectsEvents;
+use Spatie\EventSourcing\EventHandlers\Projectors\Projector;
 
-final class TransactionCountProjector implements Projector
+final class TransactionCountProjector extends Projector
 {
-    use ProjectsEvents;
-
     public function onAccountCreated(AccountCreated $event, string $aggregateUuid)
     {
         TransactionCount::create([

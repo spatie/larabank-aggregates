@@ -2,8 +2,8 @@
 
 namespace App\Domain\Account\Events;
 
-use Spatie\EventSourcing\ShouldBeStored;
+use Spatie\EventSourcing\StoredEvents\ShouldBeStored;
 
-final class AccountLimitHit implements ShouldBeStored
+final class AccountLimitHit extends ShouldBeStored
 {
 }

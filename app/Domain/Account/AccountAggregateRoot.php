@@ -9,7 +9,7 @@ use App\Domain\Account\Events\MoneyAdded;
 use App\Domain\Account\Events\MoneySubtracted;
 use App\Domain\Account\Events\MoreMoneyNeeded;
 use App\Domain\Account\Exceptions\CouldNotSubtractMoney;
-use Spatie\EventSourcing\AggregateRoot;
+use Spatie\EventSourcing\AggregateRoots\AggregateRoot;
 
 final class AccountAggregateRoot extends AggregateRoot
 {
@@ -36,7 +36,7 @@ final class AccountAggregateRoot extends AggregateRoot
         return $this;
     }
 
-    protected function applyMoneyAdded(MoneyAdded $event)
+    public function applyMoneyAdded(MoneyAdded $event)
     {
         // \Log::info('apply money added' . $event->amount);
 
@@ -62,7 +62,7 @@ final class AccountAggregateRoot extends AggregateRoot
         $this->recordThat(new MoneySubtracted($amount));
     }
 
-    protected function applyMoneySubtracted(MoneySubtracted $event)
+    public function applyMoneySubtracted(MoneySubtracted $event)
     {
         $this->balance -= $event->amount;
 

@@ -2,8 +2,8 @@
 
 namespace App\Domain\Account\Events;
 
-use Spatie\EventSourcing\ShouldBeStored;
+use Spatie\EventSourcing\StoredEvents\ShouldBeStored;
 
-final class AccountDeleted implements ShouldBeStored
+final class AccountDeleted extends ShouldBeStored
 {
 }

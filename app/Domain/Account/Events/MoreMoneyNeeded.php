@@ -2,8 +2,8 @@
 
 namespace App\Domain\Account\Events;
 
-use Spatie\EventSourcing\ShouldBeStored;
+use Spatie\EventSourcing\StoredEvents\ShouldBeStored;
 
-final class MoreMoneyNeeded implements ShouldBeStored
+final class MoreMoneyNeeded extends ShouldBeStored
 {
 }

@@ -1,12 +1,30 @@
 <?php
 
-use App\Account;
-use Faker\Generator as Faker;
+namespace Database\Factories;
 
-$factory->define(Account::class, function (Faker $faker) {
-    return [
-        'name' => $faker->word,
-        'balance' => $faker->numberBetween(-1000, 1000),
-        'user_id' => factory(\App\User::class),
-    ];
-});
+use App\Account;
+use Illuminate\Database\Eloquent\Factories\Factory;
+
+class AccountFactory extends Factory
+{
+    /**
+     * The name of the factory's corresponding model.
+     *
+     * @var string
+     */
+    protected $model = Account::class;
+
+    /**
+     * Define the model's default state.
+     *
+     * @return array
+     */
+    public function definition()
+    {
+        return [
+            'name' => $this->faker->word,
+            'balance' => $this->faker->numberBetween(-1000, 1000),
+            'user_id' => \App\User::factory(),
+        ];
+    }
+}

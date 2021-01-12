@@ -1,5 +1,7 @@
 <?php
 
+namespace Database\Seeders;
+
 use App\Account;
 use App\Domain\Account\AccountAggregateRoot;
 use App\User;

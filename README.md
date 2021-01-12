@@ -2,7 +2,7 @@
 
 ![Larabank accounts page](https://spatie.github.io/larabank-traditional/screenshot.png)
 
-This is an example app used in the documentation of [laravel-event-projector](https://docs.spatie.be/laravel-event-projector).
+This is an example app used in the documentation of [laravel-event-projector](https://spatie.be/laravel-event-sourcing).
 
 These rules are implemented:
 - a user cannot go below -5000 on an account
@@ -25,7 +25,7 @@ We highly appreciate you sending us a postcard from your hometown, mentioning wh
 - `composer install`
 - `yarn`, `yarn run dev` (or the npm equivalents)
 - migrate and seed the database with `php artisan migrate:fresh --seed`
-- you can now loging in with user "user@larabank.com", password "secret"
+- you can now log in with user "user@larabank.com", password "secret"
 
 ## Credits
 

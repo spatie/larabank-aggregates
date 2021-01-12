@@ -8,7 +8,7 @@
     ],
     "license": "MIT",
     "require": {
-        "php": "^7.3|^8.0",
+        "php": "^8.0",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
@@ -22,7 +22,6 @@
         "spatie/laravel-event-sourcing": "^4.5"
     },
     "require-dev": {
-        "beyondcode/laravel-dump-server": "^1.5",
         "filp/whoops": "^2.9",
         "friendsofphp/php-cs-fixer": "^2.16",
         "mockery/mockery": "^1.4.2",

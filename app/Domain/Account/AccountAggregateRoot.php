@@ -35,8 +35,6 @@ class AccountAggregateRoot extends AggregateRoot
 
     public function applyMoneyAdded(MoneyAdded $event)
     {
-        ray('applying money added ' . $event->amount);
-
         $this->accountLimitHitInARow = 0;
 
         $this->balance += $event->amount;

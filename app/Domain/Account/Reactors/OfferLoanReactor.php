@@ -2,7 +2,7 @@
 
 namespace App\Domain\Account\Reactors;
 
-use App\Account;
+use App\Models\Account;
 use App\Domain\Account\Events\MoreMoneyNeeded;
 use App\Mail\LoanProposalMail;
 use Illuminate\Contracts\Queue\ShouldQueue;

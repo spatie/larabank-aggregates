@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\TransactionCount;
+use App\Models\TransactionCount;
 
 class TransactionsController extends Controller
 {

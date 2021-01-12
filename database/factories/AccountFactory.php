@@ -2,7 +2,7 @@
 
 namespace Database\Factories;
 
-use App\Account;
+use App\Models\Account;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class AccountFactory extends Factory
@@ -24,7 +24,7 @@ class AccountFactory extends Factory
         return [
             'name' => $this->faker->word,
             'balance' => $this->faker->numberBetween(-1000, 1000),
-            'user_id' => \App\User::factory(),
+            'user_id' => \App\Models\User::factory(),
         ];
     }
 }

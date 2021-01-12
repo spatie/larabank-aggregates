@@ -2,7 +2,7 @@
 
 namespace App\Domain\Account\Projectors;
 
-use App\Account;
+use App\Models\Account;
 use App\Domain\Account\Events\AccountCreated;
 use App\Domain\Account\Events\AccountDeleted;
 use App\Domain\Account\Events\MoneyAdded;

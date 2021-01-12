@@ -5,7 +5,7 @@ namespace App\Domain\Account\Projectors;
 use App\Domain\Account\Events\AccountCreated;
 use App\Domain\Account\Events\MoneyAdded;
 use App\Domain\Account\Events\MoneySubtracted;
-use App\TransactionCount;
+use App\Models\TransactionCount;
 use Spatie\EventSourcing\EventHandlers\Projectors\Projector;
 
 final class TransactionCountProjector extends Projector

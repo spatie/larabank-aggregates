@@ -2,9 +2,9 @@
 
 namespace Database\Seeders;
 
-use App\Account;
+use App\Models\Account;
 use App\Domain\Account\AccountAggregateRoot;
-use App\User;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Foundation\Testing\WithFaker;
 use Laravel\Telescope\Telescope;

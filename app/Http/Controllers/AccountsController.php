@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Account;
+use App\Models\Account;
 use App\Domain\Account\AccountAggregateRoot;
 use App\Http\Requests\UpdateAccountRequest;
 use Illuminate\Http\Request;

@@ -9,7 +9,7 @@ use App\Domain\Account\Events\MoneyAdded;
 use App\Domain\Account\Events\MoneySubtracted;
 use Spatie\EventSourcing\EventHandlers\Projectors\Projector;
 
-final class AccountProjector extends Projector
+class AccountProjector extends Projector
 {
     public function onAccountCreated(AccountCreated $event, string $aggregateUuid)
     {

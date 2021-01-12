@@ -11,16 +11,13 @@ use App\Domain\Account\Events\MoreMoneyNeeded;
 use App\Domain\Account\Exceptions\CouldNotSubtractMoney;
 use Spatie\EventSourcing\AggregateRoots\AggregateRoot;
 
-final class AccountAggregateRoot extends AggregateRoot
+class AccountAggregateRoot extends AggregateRoot
 {
-    /** @var int */
-    private $balance = 0;
+    private int $balance = 0;
 
-    /** @var int */
-    private $accountLimit = -5000;
+    private int $accountLimit = -5000;
 
-    /** @var int */
-    private $accountLimitHitInARow = 0;
+    private int $accountLimitHitInARow = 0;
 
     public function createAccount(string $name, string $userId)
     {
@@ -38,7 +35,7 @@ final class AccountAggregateRoot extends AggregateRoot
 
     public function applyMoneyAdded(MoneyAdded $event)
     {
-        // \Log::info('apply money added' . $event->amount);
+        // ray('apply money added', $event->amount);
 
         $this->accountLimitHitInARow = 0;
 

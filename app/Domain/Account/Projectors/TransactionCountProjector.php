@@ -8,7 +8,7 @@ use App\Domain\Account\Events\MoneySubtracted;
 use App\Models\TransactionCount;
 use Spatie\EventSourcing\EventHandlers\Projectors\Projector;
 
-final class TransactionCountProjector extends Projector
+class TransactionCountProjector extends Projector
 {
     public function onAccountCreated(AccountCreated $event, string $aggregateUuid)
     {

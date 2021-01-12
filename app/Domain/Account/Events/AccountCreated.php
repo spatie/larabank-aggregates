@@ -4,7 +4,7 @@ namespace App\Domain\Account\Events;
 
 use Spatie\EventSourcing\StoredEvents\ShouldBeStored;
 
-final class AccountCreated extends ShouldBeStored
+class AccountCreated extends ShouldBeStored
 {
     /** @var string */
     public $name;

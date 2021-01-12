@@ -4,7 +4,7 @@ namespace App\Domain\Account\Events;
 
 use Spatie\EventSourcing\StoredEvents\ShouldBeStored;
 
-final class MoneySubtracted extends ShouldBeStored
+class MoneySubtracted extends ShouldBeStored
 {
     /** @var int */
     public $amount;

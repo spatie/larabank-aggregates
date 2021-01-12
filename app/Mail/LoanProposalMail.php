@@ -12,6 +12,8 @@ class LoanProposalMail extends Mailable
 
     public function build()
     {
-        return $this->view('mails.loan-proposal');
+        return $this
+            ->subject('Loan proposal')
+            ->markdown('mails.loan-proposal');
     }
 }

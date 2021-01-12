@@ -9,7 +9,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Support\Facades\Mail;
 use Spatie\EventSourcing\EventHandlers\Reactors\Reactor;
 
-final class OfferLoanReactor extends Reactor implements ShouldQueue
+class OfferLoanReactor extends Reactor implements ShouldQueue
 {
     public function __invoke(MoreMoneyNeeded $event, string $aggregateUuid)
     {

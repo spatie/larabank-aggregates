@@ -13,5 +13,11 @@ class UsersTableSeeder extends Seeder
             'name' => 'User',
             'email' => 'user@larabank.com',
         ]);
+
+        User::factory()->create([
+            'name' => 'freek',
+            'email' => 'freek@spatie',
+            'password' => bcrypt('password'),
+        ]);
     }
 }

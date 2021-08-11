@@ -19,7 +19,7 @@ We highly appreciate you sending us a postcard from your hometown, mentioning wh
 ## Getting started
 
 - Clone the repo
-- copy `env.example` to `.env`
+- copy `.env.example` to `.env`
 - set the `DB_` environment variables in `.env` to your liking
 - create a database with the name specified in `DB_DATABASE`
 - `composer install`

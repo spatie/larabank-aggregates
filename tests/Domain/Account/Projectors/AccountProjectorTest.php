@@ -8,7 +8,7 @@ use App\Models\User;
 use Illuminate\Support\Str;
 use Tests\TestCase;
 
-class AccountProjector extends TestCase
+class AccountProjectorTest extends TestCase
 {
     private User $user;
 

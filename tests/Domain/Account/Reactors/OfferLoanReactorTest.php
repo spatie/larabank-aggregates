@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Domain\Account\Projectors;
+namespace Tests\Domain\Account\Reactors;
 
 use App\Domain\Account\AccountAggregateRoot;
 use App\Domain\Account\Exceptions\CouldNotSubtractMoney;

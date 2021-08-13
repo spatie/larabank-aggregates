@@ -13,24 +13,16 @@ class TransactionCountProjectorTest extends TestCase
     /** @test */
     public function test_transaction_count(): void
     {
-        $uuid = Str::uuid();
-
-        $user = User::factory()->create();
-
-        $aggregate = AccountAggregateRoot::retrieve($uuid)
-            ->createAccount('account', $user->id)
-            ->persist();
-
         $this->assertDatabaseHas((new TransactionCount())->getTable(), [
-            'uuid' => $aggregate->uuid(),
-            'user_id' => $user->id,
+            'uuid' => $this->account->uuid,
+            'user_id' => $this->user->id,
         ]);
 
-        $transactionCount = TransactionCount::uuid($uuid);
+        $transactionCount = TransactionCount::uuid($this->account->uuid);
 
         $this->assertEquals(0, $transactionCount->count);
 
-        AccountAggregateRoot::retrieve($uuid)
+        AccountAggregateRoot::retrieve($this->account->uuid)
             ->addMoney(10)
             ->persist();
 

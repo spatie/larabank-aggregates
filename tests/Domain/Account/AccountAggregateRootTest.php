@@ -20,16 +20,6 @@ class AccountAggregateRootTest extends TestCase
 
     private const ACCOUNT_NAME = 'fake-account';
 
-    private User $user;
-
-    public function setUp(): void
-    {
-        parent::setUp();
-
-        Carbon::setTestNow('2020-01-01');
-
-        $this->user = User::factory()->create();
-    }
     /** @test */
     public function can_create(): void
     {

@@ -6,16 +6,8 @@ use Spatie\EventSourcing\StoredEvents\ShouldBeStored;
 
 class AccountCreated extends ShouldBeStored
 {
-    /** @var string */
-    public $name;
-
-    /** @var int */
-    public $userId;
-
-    public function __construct(string $name, int $userId)
-    {
-        $this->name = $name;
-
-        $this->userId = $userId;
-    }
+    public function __construct(
+        public string $name, 
+        public int $userId, 
+    ) {}
 }

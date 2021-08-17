@@ -11,9 +11,9 @@ use Spatie\EventSourcing\EventHandlers\Reactors\Reactor;
 
 class OfferLoanReactor extends Reactor implements ShouldQueue
 {
-    public function __invoke(MoreMoneyNeeded $event, string $aggregateUuid)
+    public function __invoke(MoreMoneyNeeded $event)
     {
-        $account = Account::where('uuid', $aggregateUuid)->first();
+        $account = Account::where('uuid', $event->aggregateRootUuid())->first();
 
         Mail::to($account->user)->send(new LoanProposalMail());
     }

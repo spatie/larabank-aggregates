@@ -11,35 +11,35 @@ use Spatie\EventSourcing\EventHandlers\Projectors\Projector;
 
 class AccountProjector extends Projector
 {
-    public function onAccountCreated(AccountCreated $event, string $aggregateUuid)
+    public function onAccountCreated(AccountCreated $event)
     {
         Account::create([
-            'uuid' => $aggregateUuid,
+            'uuid' => $event->aggregateRootUuid(),
             'name' => $event->name,
             'user_id' => $event->userId,
         ]);
     }
 
-    public function onMoneyAdded(MoneyAdded $event, string $aggregateUuid)
+    public function onMoneyAdded(MoneyAdded $event)
     {
-        $account = Account::uuid($aggregateUuid);
+        $account = Account::uuid($event->aggregateRootUuid());
 
         $account->balance += $event->amount;
 
         $account->save();
     }
 
-    public function onMoneySubtracted(MoneySubtracted $event, string $aggregateUuid)
+    public function onMoneySubtracted(MoneySubtracted $event)
     {
-        $account = Account::uuid($aggregateUuid);
+        $account = Account::uuid($event->aggregateRootUuid());
 
         $account->balance -= $event->amount;
 
         $account->save();
     }
 
-    public function onAccountDeleted(AccountDeleted $event, string $aggregateUuid)
+    public function onAccountDeleted(AccountDeleted $event)
     {
-        Account::uuid($aggregateUuid)->delete();
+        Account::uuid($event->aggregateRootUuid())->delete();
     }
 }

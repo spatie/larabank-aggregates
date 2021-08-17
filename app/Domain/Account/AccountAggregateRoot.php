@@ -71,7 +71,7 @@ class AccountAggregateRoot extends AggregateRoot
         return $this;
     }
 
-    public function applyAccountLimitHit()
+    public function applyAccountLimitHit(AccountLimitHit $accountLimitHit)
     {
         $this->accountLimitHitInARow++;
     }

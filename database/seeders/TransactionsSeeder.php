@@ -2,8 +2,8 @@
 
 namespace Database\Seeders;
 
-use App\Models\Account;
 use App\Domain\Account\AccountAggregateRoot;
+use App\Models\Account;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Foundation\Testing\WithFaker;

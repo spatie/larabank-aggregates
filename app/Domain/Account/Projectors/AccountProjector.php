@@ -2,11 +2,11 @@
 
 namespace App\Domain\Account\Projectors;
 
-use App\Models\Account;
 use App\Domain\Account\Events\AccountCreated;
 use App\Domain\Account\Events\AccountDeleted;
 use App\Domain\Account\Events\MoneyAdded;
 use App\Domain\Account\Events\MoneySubtracted;
+use App\Models\Account;
 use Spatie\EventSourcing\EventHandlers\Projectors\Projector;
 
 class AccountProjector extends Projector

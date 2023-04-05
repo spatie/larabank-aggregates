@@ -1083,16 +1083,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v10.5.1",
+            "version": "v10.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "485f22333e8c1dff5bae0fe0421c1e2e139713de"
+                "reference": "1282e96202085f798528ee43371b2ffbb8dcfbd8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/485f22333e8c1dff5bae0fe0421c1e2e139713de",
-                "reference": "485f22333e8c1dff5bae0fe0421c1e2e139713de",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/1282e96202085f798528ee43371b2ffbb8dcfbd8",
+                "reference": "1282e96202085f798528ee43371b2ffbb8dcfbd8",
                 "shasum": ""
             },
             "require": {
@@ -1191,7 +1191,7 @@
                 "league/flysystem-read-only": "^3.3",
                 "league/flysystem-sftp-v3": "^3.0",
                 "mockery/mockery": "^1.5.1",
-                "orchestra/testbench-core": "^8.1",
+                "orchestra/testbench-core": "^8.3",
                 "pda/pheanstalk": "^4.0",
                 "phpstan/phpdoc-parser": "^1.15",
                 "phpstan/phpstan": "^1.4.7",
@@ -1279,7 +1279,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2023-03-29T15:09:16+00:00"
+            "time": "2023-04-04T20:58:15+00:00"
         },
         {
             "name": "laravel/horizon",

@@ -10,9 +10,6 @@ use App\Domain\Account\Events\MoneyAdded;
 use App\Domain\Account\Events\MoneySubtracted;
 use App\Domain\Account\Events\MoreMoneyNeeded;
 use App\Domain\Account\Exceptions\CouldNotSubtractMoney;
-use App\Models\User;
-use Carbon\Carbon;
-use Tests\TestCase;
 
 class AccountAggregateRootTest extends TestCase
 {

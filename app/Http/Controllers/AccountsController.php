@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Account;
 use App\Domain\Account\AccountAggregateRoot;
 use App\Http\Requests\UpdateAccountRequest;
+use App\Models\Account;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;

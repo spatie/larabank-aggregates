@@ -4,8 +4,6 @@ namespace Tests\Domain\Account\Projectors;
 
 use App\Domain\Account\AccountAggregateRoot;
 use App\Models\TransactionCount;
-use App\Models\User;
-use Illuminate\Support\Str;
 use Tests\TestCase;
 
 class TransactionCountProjectorTest extends TestCase

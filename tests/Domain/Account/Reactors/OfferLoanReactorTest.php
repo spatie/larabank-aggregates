@@ -20,17 +20,17 @@ class OfferLoanReactorTest extends TestCase
         $aggregate->subtractMoney(5000);
         $aggregate->persist();
 
-        $this->assertExceptionThrown(function () use ($aggregate){
+        $this->assertExceptionThrown(function () use ($aggregate) {
             $aggregate->subtractMoney(1);
         }, CouldNotSubtractMoney::class);
 
-        $this->assertExceptionThrown(function () use ($aggregate){
+        $this->assertExceptionThrown(function () use ($aggregate) {
             $aggregate->subtractMoney(1);
         }, CouldNotSubtractMoney::class);
 
         Mail::assertNotSent(LoanProposalMail::class);
 
-        $this->assertExceptionThrown(function () use ($aggregate){
+        $this->assertExceptionThrown(function () use ($aggregate) {
             $aggregate->subtractMoney(1);
         }, CouldNotSubtractMoney::class);
 

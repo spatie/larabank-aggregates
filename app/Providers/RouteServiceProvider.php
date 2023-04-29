@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Route;
 
 class RouteServiceProvider extends ServiceProvider
 {
+    public const HOME = '/home';
+
     /**
      * Define your route model bindings, pattern filters, etc.
      *

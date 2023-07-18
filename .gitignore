@@ -15,3 +15,4 @@ yarn-error.log
 /js
 /css
 .php_cs.cache
+.idea

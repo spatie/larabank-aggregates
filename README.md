@@ -5,7 +5,7 @@
 
 ![Larabank accounts page](https://spatie.github.io/larabank-traditional/screenshot.png)
 
-This is an example app used in the documentation of [laravel-event-projector](https://spatie.be/docs/laravel-event-sourcing).
+This is an example app used in the documentation of [laravel-event-sourcing](https://spatie.be/docs/laravel-event-sourcing).
 
 These rules are implemented:
 - a user cannot go below -5000 on an account

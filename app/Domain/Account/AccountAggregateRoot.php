@@ -13,11 +13,11 @@ use Spatie\EventSourcing\AggregateRoots\AggregateRoot;
 
 class AccountAggregateRoot extends AggregateRoot
 {
-    protected int $balance = 0;
+    public int $balance = 0;
 
     protected int $accountLimit = -5000;
 
-    protected int $accountLimitHitInARow = 0;
+    public int $accountLimitHitInARow = 0;
 
     public function createAccount(string $name, string $userId)
     {
